@@ -14,7 +14,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Campeonatos <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Usuários</a></li>
+        <li><a href="#">Usuários  </a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Login</a></li>
