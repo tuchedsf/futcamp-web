@@ -1,12 +1,11 @@
 <template>
-<h1>Olá {{$route.params.nome}}</h1>
+  <!-- <header class="page-header row"> -->
+    <h1>Dashboard</h1>
+  <!-- </header> -->
 </template>
 
 <script>
 export default {
-
-  name: 'principal',
-
   data () {
     return {
 

@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App'
-import router from './router/'
+import router from './router/' // como termina em / vai buscar o arquivo index dentro da pasta.
 
 Vue.config.productionTip = false
 
