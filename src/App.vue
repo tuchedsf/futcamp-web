@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import CcNavbar from './components/root/navbar'
+import CcNavbar from './components/root/header/navbar'
 
 export default {
   name: 'app',
