@@ -23,6 +23,7 @@ module.exports = {
     alias: {
       '@': resolve('src'),
       'assets': path.resolve(__dirname, '../src/assets'),
+      'src': path.resolve(__dirname, '../src'),
     }
   },
   module: {
