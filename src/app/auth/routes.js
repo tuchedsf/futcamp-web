@@ -1,5 +1,5 @@
-import Login from './components/Login'
+import Main from './components/Main'
 
 export default [
-  { path: '/login', component: Login }
+  { path: '/login', component: Main }
 ]
