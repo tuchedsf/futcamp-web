@@ -27,7 +27,16 @@
 import { isEmpty } from 'lodash'
 
 const initialData = {
-  user: { email: '', password: '' }
+  token: '',
+  expires: '',
+  user: {
+    _id: '',
+    email: '',
+    password: '',
+    __v: '',
+    campeonatos: [],
+    created_at: ''
+  }
 }
 
 export default {

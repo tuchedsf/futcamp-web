@@ -11,6 +11,8 @@
 
 <script>
 import CcLogin from './forms/Login'
+import { mapGetters } from 'vuex'
+
 export default {
   name: 'Main',
   data () {
@@ -20,6 +22,9 @@ export default {
   },
   components: {
     CcLogin
+  },
+  computed: {
+    ...mapGetters(['isLogged'])
   }
 }
 </script>
