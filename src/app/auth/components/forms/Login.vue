@@ -58,7 +58,9 @@ export default {
     },
     doLogin () {
       console.log(this.user)
-      this.$router.push('/')
+      // this.$router.push('/')
+      const user = this.user
+      this.$store.dispatch('attempLogin', {...user})
     }
   }
 }
