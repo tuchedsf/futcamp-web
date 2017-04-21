@@ -1,8 +1,9 @@
-import Http from 'src/http'
+// import Http from 'src/http'
+
+import { postLogin } from '../services'
 
 export const attempLogin = (context, payload) => {
-  return Http.post('http://localhost:3000/V1/api/users/login', payload)
-    .then(response => response.data)
+  return postLogin(payload.email, payload.password)
     .then(data => {
       context.commit('setToken', data.token)
       context.commit('setExpires', data.expires)

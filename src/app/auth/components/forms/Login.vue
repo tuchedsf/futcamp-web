@@ -25,6 +25,7 @@
 </template>
 <script>
 import { isEmpty } from 'lodash'
+import { mapActions } from 'vuex'
 
 const initialData = {
   token: '',
@@ -53,14 +54,20 @@ export default {
     }
   },
   methods: {
+    ...mapActions([
+      'attempLogin'
+    ]),
     resetForm () {
       this.user = initialData
     },
     doLogin () {
       console.log(this.user)
-      // this.$router.push('/')
       const user = this.user
-      this.$store.dispatch('attempLogin', {...user})
+      // this.$store.dispatch('attempLogin', {...user})
+      this.attempLogin({...user})
+      .then(() => {
+        this.$router.push('/')
+      })
     }
   }
 }
