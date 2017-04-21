@@ -61,7 +61,7 @@ export default {
       this.user = initialData
     },
     doLogin () {
-      console.log(this.user)
+      // console.log(this.user)
       const user = this.user
       // this.$store.dispatch('attempLogin', {...user})
       this.attempLogin({...user})
