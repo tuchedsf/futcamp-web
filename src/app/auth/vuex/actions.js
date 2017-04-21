@@ -10,3 +10,9 @@ export const attempLogin = (context, payload) => {
       context.commit('setUser', data.user)
     })
 }
+
+export const attempLoggout = (context, payload) => {
+  context.commit('setToken', '')
+  context.commit('setExpires', '')
+  context.commit('setUser', {})
+}
