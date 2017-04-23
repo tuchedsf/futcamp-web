@@ -1,5 +1,5 @@
 <template>
-  <ul class="nav navbar-nav" v-if="isLogged()">
+  <ul class="nav navbar-nav" v-if="isLogged">
     <router-link to="/dashboard" tag="li" exact ><a>Campeonatos</a></router-link>
     <!-- <li class="active"><a href="#">Campeonatos <span class="sr-onlcurrent)</span></a></li> -->
     <li><a href="#">Usuários  </a></li>
@@ -10,7 +10,7 @@
 import { mapGetters } from 'vuex'
 export default {
   name: 'LeftHeader',
-  methods: {
+  computed: {
     ...mapGetters(['isLogged'])
   }
 }
