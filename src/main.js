@@ -5,15 +5,15 @@ import store from './vuex/'
 import Loader from './plugins/loader/'
 
 Vue.config.productionTip = false
-Vue.use(Loader)
+Vue.use(Loader, store)
 
 /* eslint-disable no-new */
 new Vue({
   router,
   store,
   el: '#app',
-  render: h => h(App),
-  mounted () {
-    Vue.$mylog(this)
-  }
+  render: h => h(App)
+  // mounted () {
+  //   Vue.$mylog(this)
+  // }
 })

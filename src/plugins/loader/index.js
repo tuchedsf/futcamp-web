@@ -1,12 +1,11 @@
 import loaderFactory from './loaderFactory'
+import registerStore from './registerStore'
 
-const install = Vue => {
-  Object().definePropertiy(Vue.prototype, '$loader', {
+const install = (Vue, store) => {
+  registerStore(store)
+  Object.defineProperty(Vue.prototype, '$loader', {
     get () {
-      return {
-        show: () => console.log({show: this}),
-        hide: () => console.log({hide: this})
-      }
+      return loaderFactory(this)
     }
   })
 }
