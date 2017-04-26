@@ -13,7 +13,4 @@ new Vue({
   store,
   el: '#app',
   render: h => h(App)
-  // mounted () {
-  //   Vue.$mylog(this)
-  // }
 })

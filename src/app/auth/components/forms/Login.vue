@@ -62,11 +62,13 @@ export default {
     },
     doLogin () {
       // console.log(this.user)
+      this.$loader.show()
       const user = this.user
       // this.$store.dispatch('attempLogin', {...user})
       this.attempLogin({...user})
       .then(() => {
         this.$router.push('/')
+        this.$loader.hide()
       })
     }
   }
