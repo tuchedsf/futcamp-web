@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <CcPageLoader></CcPageLoader>
     <ccNavbar></ccNavbar>
     <div class="container">
       <router-view></router-view>
