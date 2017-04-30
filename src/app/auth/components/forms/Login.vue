@@ -5,13 +5,13 @@
       <div class="form-group">
         <label for="inputEmail" class="col-lg-2 control-label">Email</label>
         <div class="col-lg-10">
-          <input type="text" class="form-control" id="inputEmail" placeholder="Email" v-model="user.email">
+          <input type="text" class="form-control" id="inputEmail" placeholder="Email" v-model="currentUser.email">
         </div>
       </div>
       <div class="form-group">
         <label for="inputPassword" class="col-lg-2 control-label">Password</label>
         <div class="col-lg-10">
-          <input type="password" class="form-control" id="inputPassword" placeholder="Password" v-model="user.password">
+          <input type="password" class="form-control" id="inputPassword" placeholder="Password" v-model="currentUser.password">
         </div>
       </div>
       <div class="form-group">
@@ -30,7 +30,7 @@ import { mapActions } from 'vuex'
 const initialData = {
   token: '',
   expires: '',
-  user: {
+  currentUser: {
     _id: '',
     email: '',
     password: '',
@@ -49,8 +49,8 @@ export default {
   },
   computed: {
     isValid () {
-      const user = this.user
-      return !isEmpty(user.email) && !isEmpty(user.password)
+      const currentUser = this.currentUser
+      return !isEmpty(currentUser.email) && !isEmpty(currentUser.password)
     }
   },
   methods: {
@@ -58,14 +58,14 @@ export default {
       'attempLogin'
     ]),
     resetForm () {
-      this.user = initialData
+      this.currentUser = initialData
     },
     doLogin () {
       // console.log(this.user)
       this.$loader.show()
-      const user = this.user
+      const currentUser = this.currentUser
       // this.$store.dispatch('attempLogin', {...user})
-      this.attempLogin({...user})
+      this.attempLogin({...currentUser})
       .then(() => {
         this.$router.push('/')
         this.$loader.hide()

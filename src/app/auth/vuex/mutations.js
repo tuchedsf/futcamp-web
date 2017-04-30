@@ -1,6 +1,6 @@
 export default {
-  setUser (state, user) {
-    state.user = user
+  setCurrentUser (state, user) {
+    state.currentUser = user
   },
   setToken (state, token) {
     state.token = token

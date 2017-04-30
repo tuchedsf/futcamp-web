@@ -7,12 +7,12 @@ export const attempLogin = (context, payload) => {
     .then(data => {
       context.commit('setToken', data.token)
       context.commit('setExpires', data.expires)
-      context.commit('setUser', data.user)
+      context.commit('setCurrentUser', data.user)
     })
 }
 
 export const attempLoggout = (context, payload) => {
   context.commit('setToken', '')
   context.commit('setExpires', '')
-  context.commit('setUser', {})
+  context.commit('setCurrentUser', {})
 }
