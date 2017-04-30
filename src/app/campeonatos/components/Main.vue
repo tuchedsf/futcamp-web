@@ -38,7 +38,7 @@ export default {
   computed: {
     ...mapGetters(['getCampeonatos']),
     formataData: (data) => {
-      return 'teste'
+      return data
     }
   },
   methods: {

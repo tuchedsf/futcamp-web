@@ -1,6 +1,25 @@
 <template lang="html">
   <div>
-<h1>Teste</h1>
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Email</th>
+          <th>Campeonatos</th>
+          <th>Data Criação</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="user in users">
+          <td>{{user.data._id}}</td>
+          <td>{{user.data.email}}</td>
+          <td>{{user.data.campeonatos.length}}</td>
+          <td>{{user.data.created_at }}</td>
+          <td>Column content</td>
+        </tr>
+      </tbody>
+    </table>
 <button v-on:click="teste()">Teste</button>
   </div>
 
