@@ -1,8 +1,9 @@
 <template>
   <ul class="nav navbar-nav" v-if="isLogged">
-    <router-link to="/dashboard" tag="li" exact ><a>Campeonatos</a></router-link>
+    <router-link to="/campeonatos" tag="li" exact ><a>Campeonatos</a></router-link>
+    <router-link to="/users" tag="li" exact ><a>Usuários</a></router-link>
     <!-- <li class="active"><a href="#">Campeonatos <span class="sr-onlcurrent)</span></a></li> -->
-    <li><a href="#">Usuários  </a></li>
+    <!-- <li><a href="#">Usuários  </a></li> -->
   </ul>
 </template>
 
