@@ -12,7 +12,6 @@ export default {
   name: 'UserMain',
   methods: {
     teste () {
-      alert('teste')
       swal(
         'Oops...',
         'Something went wrong!',
