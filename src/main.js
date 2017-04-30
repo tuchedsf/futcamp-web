@@ -7,6 +7,11 @@ import Loader from './plugins/loader/'
 Vue.config.productionTip = false
 Vue.use(Loader, store)
 
+/**
+* jQuery and Bootstrap includes
+*/
+require('./includes')
+
 /* eslint-disable no-new */
 new Vue({
   router,
