@@ -4,5 +4,8 @@ export default {
   },
   setUser (state, user) {
     state.user = user
+  },
+  removeUser (state, user) {
+    state.users = state.users.filter(u => u.data._id !== user.id)
   }
 }
