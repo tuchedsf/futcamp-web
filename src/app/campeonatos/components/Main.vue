@@ -11,7 +11,7 @@
       <tbody>
         <tr v-for="camp in campeonatos">
           <td>{{camp.data.nome}}</td>
-          <td>{{camp.data.created_at | formataData }}</td>
+          <td>{{ moment(camp.data.created_at).format("L") }}</td>
           <td>Column content</td>
         </tr>
       </tbody>
@@ -36,10 +36,7 @@ export default {
       })
   },
   computed: {
-    ...mapGetters(['getCampeonatos']),
-    formataData: (data) => {
-      return data
-    }
+    ...mapGetters(['getCampeonatos'])
   },
   methods: {
     ...mapActions(['buscarCampeonatos'])

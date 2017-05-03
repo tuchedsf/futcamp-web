@@ -11,7 +11,7 @@ export default {
     http.get('http://pokeapi.co/api/v2/pokemon/6/')
     .then(response => response.data)
     .then(data => {
-      console.log(data)
+      // console.log(data)
     })
   }
 }
