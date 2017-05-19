@@ -1,5 +1,10 @@
 export default {
   token: '',
   expires: '',
-  currentUser: {}
+  currentUser: {},
+  errorMessage: {
+    status: '',
+    code: '',
+    message: ''
+  }
 }

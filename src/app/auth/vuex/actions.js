@@ -9,10 +9,18 @@ export const attempLogin = (context, payload) => {
       context.commit('setExpires', data.expires)
       context.commit('setCurrentUser', data.user)
     })
+    .catch(err => {
+      let erro = err
+      context.commit('setMessage', erro.response.data)
+    })
 }
 
 export const attempLoggout = (context, payload) => {
   context.commit('setToken', '')
   context.commit('setExpires', '')
   context.commit('setCurrentUser', {})
+}
+
+export const resetMessage = (context) => {
+  context.commit('setMessage', {})
 }

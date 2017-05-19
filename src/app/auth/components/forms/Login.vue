@@ -25,7 +25,8 @@
 </template>
 <script>
 import { isEmpty } from 'lodash'
-import { mapActions } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
+import { default as swal } from 'sweetalert2'
 
 const initialData = {
   token: '',
@@ -51,23 +52,28 @@ export default {
     isValid () {
       const currentUser = this.currentUser
       return !isEmpty(currentUser.email) && !isEmpty(currentUser.password)
-    }
+    },
+    ...mapGetters(['getMessage'])
   },
   methods: {
     ...mapActions([
-      'attempLogin'
+      'attempLogin',
+      'resetMessage'
     ]),
     resetForm () {
       this.currentUser = initialData
     },
     doLogin () {
-      // console.log(this.user)
+      this.$store.dispatch('resetMessage')
       this.$loader.show()
       const currentUser = this.currentUser
-      // this.$store.dispatch('attempLogin', {...user})
       this.attempLogin({...currentUser})
       .then(() => {
-        this.$router.push('/')
+        if (!isEmpty(this.getMessage)) {
+          swal('Oopsss... Error: ' + this.getMessage.status, this.getMessage.message, 'error')
+        } else {
+          this.$router.push('/')
+        }
         this.$loader.hide()
       })
     }
