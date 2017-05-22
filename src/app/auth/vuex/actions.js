@@ -20,7 +20,3 @@ export const attempLoggout = (context, payload) => {
   context.commit('setExpires', '')
   context.commit('setCurrentUser', {})
 }
-
-export const resetMessage = (context) => {
-  context.commit('setMessage', {})
-}

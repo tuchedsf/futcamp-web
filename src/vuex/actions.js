@@ -1,3 +1,3 @@
-export default {
-
+export const resetMessage = (context) => {
+  context.commit('setMessage', {})
 }

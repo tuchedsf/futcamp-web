@@ -7,8 +7,5 @@ export default {
   },
   setExpires (state, expires) {
     state.expires = expires
-  },
-  setMessage (state, message) {
-    state.errorMessage = message
   }
 }
