@@ -7,5 +7,8 @@ export default {
   },
   removeUser (state, user) {
     state.users = state.users.filter(u => u.data._id !== user.id)
+  },
+  addUser (state, user) {
+    state.users.push(user)
   }
 }
